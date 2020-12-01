@@ -25,6 +25,5 @@ jobs:
         python -m pip install --upgrade pip
         poetry install
     - name: Lint
-      run: |
-        pre-commit run --all-files 
-
+      uses: pre-commit/action@v2.0.0
+    
