@@ -8,7 +8,7 @@ include = []
 classifiers = []
 
 [tool.poetry.scripts]
-smd = 'idazen.main:cli'
+idazen = 'idazen.main:cli'
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
