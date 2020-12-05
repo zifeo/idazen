@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "idazen"
-version = "0.1.0"
+version = "0.1.1"
 description = "Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN 🙌."
 authors = ["Teo Stocco"]
 homepage = ""
