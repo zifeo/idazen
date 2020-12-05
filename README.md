@@ -1,6 +1,7 @@
 # idazen
 
 [![Actions Status](https://github.com/zifeo/idazen/workflows/CI/badge.svg)](https://github.com/zifeo/idazen/actions)
+[![PyPI version](https://badge.fury.io/py/idazen.svg)](https://badge.fury.io/py/idazen)
 
 Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN 🙌.
 
