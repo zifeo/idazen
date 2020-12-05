@@ -26,4 +26,3 @@ jobs:
         poetry install
     - name: Lint
       uses: pre-commit/action@v2.0.0
-    

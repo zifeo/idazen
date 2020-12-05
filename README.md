@@ -2,20 +2,23 @@
 
 [![Actions Status](https://github.com/zifeo/idazen/workflows/CI/badge.svg)](https://github.com/zifeo/idazen/actions)
 
-
-Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN.
+Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN 🙌.
 
 ## Getting started
 
 ```
-pip3 install --upgrade git+https://github.com/zifeo/idazen.git   
+# pypi
+pip install idazen
+
+# master
+pip install --upgrade git+https://github.com/zifeo/idazen.git   
 ```
 
 ## Usage
 
 ```
 > idazen scan
-Scanning 5s...
+Scanning 10s...
 Found: Desk 7764 (3C9D3306-3B80-4D68-8670-AC9451083BC5)
 Use "idazen save 3C9D3306-3B80-4D68-8670-AC9451083BC5" or "idazen scan --save"
 ```
