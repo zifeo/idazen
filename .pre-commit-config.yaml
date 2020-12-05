@@ -11,3 +11,8 @@ repos:
   rev: 3.8.4
   hooks:
   - id: flake8
+- repo: https://github.com/zifeo/pre-commit
+  rev: v0.1.0
+  hooks:
+  - id: poetry-tag-checker
+
