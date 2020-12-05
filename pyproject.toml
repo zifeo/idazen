@@ -3,7 +3,6 @@ name = "idazen"
 version = "0.1.1"
 description = "Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN 🙌."
 authors = ["Teo Stocco"]
-homepage = ""
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/zifeo/idazen"
@@ -24,7 +23,6 @@ bleak = "^0.9.1"
 asyncio = "^3.4.3"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^3.7.9"
 pre-commit = "^2.9.2"
 
 [build-system]
