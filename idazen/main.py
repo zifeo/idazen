@@ -1,4 +1,5 @@
 import asyncio
+from importlib import metadata
 import json
 import logging
 from pathlib import Path
@@ -8,8 +9,14 @@ from bleak import BleakError
 from idazen import core
 import typer
 
+package_name = "idazen"
+try:
+    __version__ = metadata.version(package_name)
+except metadata.PackageNotFoundError:
+    __version__ = "dev"
+
 cli = typer.Typer()
-app_dir = Path(typer.get_app_dir("idazen"))
+app_dir = Path(typer.get_app_dir(package_name))
 app_dir.mkdir(parents=True, exist_ok=True)
 config_path: Path = Path(app_dir) / "config.json"
 logging.debug(config_path)
@@ -81,10 +88,15 @@ def move(height: float, desk: Optional[str] = None):
         raise typer.Exit(1)
 
 
+@cli.command()
+def version():
+    typer.echo(f"{package_name} {__version__}")
+
+
 @cli.callback()
 def help():
     """
-    Idazen.
+    Take control over your IDAZEN standing desk without hassle and stay ZEN 🙌.
     """
 
 

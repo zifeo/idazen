@@ -36,8 +36,7 @@ async def scan(timeout=10):
 
 
 async def move(desk, target):
-    async with BleakClient(desk, timeout=3.0) as client:
-        await client.is_connected()
+    async with BleakClient(desk, timeout=10) as client:
 
         async def height():
             data = await client.read_gatt_char(UUID_HEIGHT)
@@ -45,35 +44,29 @@ async def move(desk, target):
             return to_cm(pos)
 
         async def up():
-            await client.write_gatt_char(UUID_COMMAND, UP)
+            await client.write_gatt_char(UUID_COMMAND, UP, response=True)
 
         async def down():
-            await client.write_gatt_char(UUID_COMMAND, DOWN)
+            await client.write_gatt_char(UUID_COMMAND, DOWN, response=True)
 
         async def stop():
-            await client.write_gatt_char(UUID_COMMAND, STOP)
-
-        async def move(objective):
-            h = await height()
-            logging.debug(f"current height {h}")
-
-            while abs(objective - h) > DELTA:
-                if objective > h:
-                    await up()
-                else:
-                    await down()
-
-                await asyncio.sleep(SLEEP_STEP)
-                h = await height()
-                logging.debug(f"current height {h}")
-
-            await stop()
-
-        await move(target)
+            await client.write_gatt_char(UUID_COMMAND, STOP, response=True)
 
         h = await height()
-        logging.debug(f"current height {h}")
+        logging.debug(f"start height {h}")
 
-        await client.disconnect()
+        while abs(target - h) > DELTA:
+            logging.debug(f"current height {h}")
 
+            if target > h:
+                await up()
+            else:
+                await down()
+
+            await asyncio.sleep(SLEEP_STEP)
+            h = await height()
+
+        await stop()
+
+    logging.debug(f"final height {h}")
     return h
