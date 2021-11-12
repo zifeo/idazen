@@ -308,7 +308,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "c7eedb24f3c07ebfdc02402a3c4b32a636c8fd5a391be9ace6694299094ef307"
+content-hash = "936abf9cfd57386acbd63387055c9cb44dd94890ed570663954839d4fcc94fc9"
 
 [metadata.files]
 asyncio = [
