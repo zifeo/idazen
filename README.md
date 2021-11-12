@@ -15,6 +15,10 @@ pip install idazen
 pip install --upgrade git+https://github.com/zifeo/idazen.git   
 ```
 
+### MacOS
+
+You may need to add your Terminal (or other) app to the Bluetooth allowlist `System Preferences > Security & Privacy > Bluetooth`.
+
 ## Usage
 
 ```
