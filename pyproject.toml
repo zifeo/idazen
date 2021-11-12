@@ -18,8 +18,8 @@ idazen = 'idazen.main:cli'
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
-typer = {extras = ["all"], version = "^0.3.2"}
-bleak = "^0.12.0"
+typer = "^0.4.0"
+bleak = "^0.13.0"
 asyncio = "^3.4.3"
 
 [tool.poetry.dev-dependencies]
