@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "idazen"
-version = "0.1.3"
+version = "0.2.0"
 description = "Take control over your Ikea IDÅSEN standing desk without hassle and stay ZEN 🙌."
 authors = ["Teo Stocco"]
 license = "MIT"
@@ -28,7 +28,7 @@ pytest = "^7.1.2"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.3"
+version = "0.2.0"
 tag_format = "v$major.$minor.$patch$prerelease"
 version_files = [
     "pyproject.toml:version",
