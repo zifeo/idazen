@@ -11,6 +11,9 @@ Take control over your Ikea IDÃ…SEN standing desk without hassle and stay ZEN ðŸ
 # pypi
 pip install idazen
 
+# pipx
+pipx install idazen
+
 # master
 pip install --upgrade git+https://github.com/zifeo/idazen.git   
 ```
