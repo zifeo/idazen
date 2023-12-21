@@ -5,7 +5,7 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from bleak import BleakError
+from bleak.exc import BleakError
 from idazen import core
 import typer
 
@@ -72,7 +72,6 @@ def save(desk: str):
 
 @cli.command()
 def move(height: float, desk: Optional[str] = None):
-
     if desk is None:
         desk = read().get("desk")
 

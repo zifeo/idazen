@@ -30,7 +30,7 @@ def to_cm(native):
 async def scan(timeout=10):
     desks = {}
     for device in await BleakScanner.discover(timeout=timeout):
-        if device.name.startswith(DESK_KEYWORD):
+        if device.name is not None and device.name.startswith(DESK_KEYWORD):
             desks[device.name] = device.address
     return desks
 
